@@ -14,8 +14,6 @@ OpenCV-4.6.0
 
 1. Export ONNX model
    
-   Please refer to the [ONNX tutorial](../../ONNXRuntime). 
-
 2. Convert ONNX to OpenVINO 
 
    Install requirements for convert tool
@@ -41,8 +39,6 @@ OpenCV-4.6.0
    ```
 
    visit [Openvino POT](https://docs.openvino.ai/latest/notebooks/114-quantization-simplified-mode-with-output.html) for more details.
-
-   Make sure the input shape is consistent with [those](yolox_openvino.cpp#L24-L25) in cpp file. 
 
 ## Build 
 
