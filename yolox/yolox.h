@@ -28,10 +28,10 @@ struct Detection {
 	cv::Rect box;
 };
 
-class YOLOV5 {
+class YOLOX {
 public:
-	YOLOV5(Config config);
-	~YOLOV5();
+	YOLOX(Config config);
+	~YOLOX();
 	void detect(cv::Mat& frame);
 
 private:

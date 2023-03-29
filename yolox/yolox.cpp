@@ -451,7 +451,7 @@ const vector<string> coconame = { "person",
         "hair drier",
         "toothbrush" };
 
-YOLOV5::YOLOV5(Config config) {
+YOLOX::YOLOX(Config config) {
 	this->confThreshold = config.confThreshold;
 	this->nmsThreshold = config.nmsThreshold;
     this->scoreThreshold = config.scoreThreshold;
@@ -460,8 +460,8 @@ YOLOV5::YOLOV5(Config config) {
 	this->onnx_path = config.onnx_path;
     this->initialmodel();
 }
-YOLOV5::~YOLOV5(){}
-void YOLOV5::detect(Mat & frame) {
+YOLOX::~YOLOX(){}
+void YOLOX::detect(Mat & frame) {
     
     preprocess_img(frame);
     infer_request.infer();
@@ -477,7 +477,7 @@ void YOLOV5::detect(Mat & frame) {
     draw_objects(frame, objects);
 }
 
-void YOLOV5::initialmodel() {
+void YOLOX::initialmodel() {
     ov::Core core;
     std::shared_ptr<ov::Model> model = core.read_model(this->onnx_path);
     ov::preprocess::PrePostProcessor ppp = ov::preprocess::PrePostProcessor(model);
@@ -493,7 +493,7 @@ void YOLOV5::initialmodel() {
 }
 
 
-void YOLOV5::preprocess_img(Mat& frame) {
+void YOLOX::preprocess_img(Mat& frame) {
     float width = frame.cols;
     float height = frame.rows;
     cv::Size new_shape= cv::Size(inpWidth, inpHeight);
@@ -516,7 +516,7 @@ void YOLOV5::preprocess_img(Mat& frame) {
 }
 
 
-void YOLOV5::postprocess_img(Mat& frame, float* detections, ov::Shape & output_shape) {
+void YOLOX::postprocess_img(Mat& frame, float* detections, ov::Shape & output_shape) {
     std::vector<cv::Rect> boxes;
     vector<int> class_ids;
     vector<float> confidences;

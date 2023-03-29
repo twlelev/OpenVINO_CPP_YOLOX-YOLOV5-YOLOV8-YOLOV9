@@ -3,7 +3,7 @@
 int main() {
 
     Config config = { 0.2,0.4,0.4,640,640,"../optimized/yolox_s_int8.xml" };
-    YOLOV5 yolomodel(config);
+    YOLOX yolomodel(config);
     clock_t start, end;
     cv::Mat img = cv::imread("../bus.jpg");
     start = clock();
