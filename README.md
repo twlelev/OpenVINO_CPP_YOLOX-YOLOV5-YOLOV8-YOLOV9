@@ -1,6 +1,6 @@
-# YOLOX-YOLOV5-YOLOV8-OpenVINO in C++
+# YOLOX-YOLOV5-YOLOV8-YOLOV9-OpenVINO in C++
 
-This tutorial includes a C++ inference of YOLOX/YOLOV5/YOLOV8 for OpenVINO.
+This tutorial includes a C++ inference of YOLOX/YOLOV5/YOLOV8/YOLOV9 for OpenVINO.
 
 ## Install OpenVINO Toolkit
 
