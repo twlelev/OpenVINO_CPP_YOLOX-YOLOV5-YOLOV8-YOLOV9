@@ -216,7 +216,6 @@ void YOLOV5::preprocess_img(Mat& frame) {
     int new_unpadH = int(round(height * r));
 
     cv::resize(frame, resize.resized_image, cv::Size(new_unpadW, new_unpadH), 0, 0, cv::INTER_AREA);
-    resize.resized_image = resize.resized_image;
     resize.dw = new_shape.width - new_unpadW;
     resize.dh = new_shape.height - new_unpadH;
     cv::Scalar color = cv::Scalar(100, 100, 100);
