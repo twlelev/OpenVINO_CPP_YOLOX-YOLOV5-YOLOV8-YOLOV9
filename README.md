@@ -57,3 +57,6 @@ make
 ```shell
 ./detect  <...><...> 
 ```
+
+## scrennshot
+![](./yolov9/result/image.jpg)
